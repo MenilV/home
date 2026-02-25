@@ -1,54 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="layout-centered">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>menilvukovic.com</title>
-    <style>
-        :root {
-            --bg: #111827;
-            --card: #1f2937;
-            --text: #f8fafc;
-            --muted: #cbd5e1;
-            --accent: #fb923c;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            min-height: 100vh;
-            display: grid;
-            place-items: center;
-            font-family: "Segoe UI", Tahoma, sans-serif;
-            background: radial-gradient(circle at top, #1f2937, var(--bg));
-            color: var(--text);
-            padding: 1.25rem;
-        }
-        .card {
-            width: min(680px, 100%);
-            background: var(--card);
-            border: 1px solid #334155;
-            border-radius: 14px;
-            padding: 1.4rem;
-            text-align: center;
-        }
-        h1 { margin-bottom: 0.6rem; }
-        p { color: var(--muted); margin-bottom: 1rem; }
-        a {
-            display: inline-block;
-            text-decoration: none;
-            background: var(--accent);
-            color: #111827;
-            font-weight: 700;
-            border-radius: 999px;
-            padding: 0.55rem 1rem;
-        }
-        a:hover { filter: brightness(1.05); }
-    </style>
-</head>
+    <link rel="stylesheet" href="/styles.css">
 <body>
-    <main class="card">
-        <h1>Hi, this is my personal page.</h1>
-        <p>Coming soon.</p>
-
+    <header class="container">
+        <h1>Menil Vukovic</h1>
+        <p>Engineer | Sarajevo</p>
+    </header>
+    <main class="container">
+        <section>
+            <h2>Projects</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Pofalići House Reconstruction</h3>
+                    <p>Detailed renovation project with budget, timeline, smart home integration.</p>
+                    <a href="/home" class="btn">View Project →</a>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
+    <footer class="container">
+        <p>&copy; 2026 Menil Vukovic. Built with HTML/CSS.</p>
+    </footer>
 </html>
