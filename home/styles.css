@@ -53,7 +53,7 @@ footer { background: #eee; padding: 1rem 0; text-align: center; margin-top: 2rem
 .amount { text-align: right; }
 .budget-total { font-size: 1.5rem; color: #309d66; font-weight: bold; }
 
-[lang="en"] { display: none; }
+
 body.lang-en [lang="bs"] { display: none; }
 body.lang-en [lang="en"] { display: revert; }
 
