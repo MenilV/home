@@ -1,0 +1,7 @@
+.DS_Store
+*.log
+.sisyphus/
+AGENTS.md
+CNAME
+.github/
+deployment/
