@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pofalici House Reconstruction</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="light-mode">
 <body>
     <header>
         <div class="container header-content">
@@ -33,8 +32,6 @@
                 <a href="#timeline" data-section="timeline"><span lang="bs">Plan</span><span lang="en">Timeline</span></a>
                 <a href="#gallery" data-section="gallery"><span lang="bs">Galerija</span><span lang="en">Gallery</span></a>
                 <a href="#floors" data-section="floors"><span lang="bs">Spratovi</span><span lang="en">Floors</span></a>
-            </div>
-            <div class="nav-row">
                 <a href="#gameroom" data-section="gameroom"><span lang="bs">Igraonica</span><span lang="en">Game Room</span></a>
                 <a href="#smarthome" data-section="smarthome"><span lang="bs">Pametna Kuca</span><span lang="en">Smart Home</span></a>
                 <a href="#decisions" data-section="decisions"><span lang="bs">Odluke</span><span lang="en">Decisions</span></a>
@@ -109,11 +106,11 @@
         </section>
 
         <section id="budget">
-            <h2 lang="bs">Budzet</h2>
-            <h2 lang="en">Budget</h2>
+            <h2 lang="bs">💰 Budzet</h2>
+            <h2 lang="en">💰 Budget</h2>
 
-            <h3 lang="bs">Kupovina i legalizacija</h3>
-            <h3 lang="en">Purchase and legalization</h3>
+            <h3 lang="bs">🏡 Kupovina i legalizacija</h3>
+            <h3 lang="en">🏡 Purchase and legalization</h3>
             <table>
                 <tr>
                     <th><span lang="bs">Stavka</span><span lang="en">Item</span></th>
@@ -153,8 +150,8 @@
                 </tr>
             </table>
 
-            <h3 lang="bs">Renovacija</h3>
-            <h3 lang="en">Renovation</h3>
+            <h3 lang="bs">🔧 Renovacija</h3>
+            <h3 lang="en">🔧 Renovation</h3>
             <table>
                 <tr>
                     <th><span lang="bs">Stavka</span><span lang="en">Item</span></th>
@@ -175,7 +172,7 @@
             </table>
 
             <div class="card">
-                <p class="budget-total"><span lang="bs">Ukupan okvirni budzet: 374,950 KM</span><span lang="en">Estimated total budget: 374,950 KM</span></p>
+                <p class="budget-total"><span lang="bs"><strong>Ukupan okvirni budzet: 374,950 KM</strong></span><span lang="en"><strong>Estimated total budget: 374,950 KM</strong></span></p>
                 <p class="muted" lang="bs">Napomena: Dodati 10-15% kontingencije na ukupan iznos.</p>
                 <p class="muted" lang="en">Note: Add 10-15% contingency to the final total.</p>
                 <div class="related-links">
@@ -225,12 +222,12 @@
             <h3 lang="bs">Postojece vizualizacije</h3>
             <h3 lang="en">Current visualizations</h3>
             <div class="gallery">
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="../images/viz/viz-01.jpg" alt="Viz 01"><p>Viz 01</p></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="../images/viz/viz-02.jpg" alt="Viz 02"><p>Viz 02</p></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="../images/viz/viz-03.jpg" alt="Viz 03"><p>Viz 03</p></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="../images/viz/viz-04.jpg" alt="Viz 04"><p>Viz 04</p></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="../images/viz/viz-05.jpg" alt="Viz 05"><p>Viz 05</p></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="../images/viz/viz-06.jpg" alt="Viz 06"><p>Viz 06</p></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/viz/viz-01.jpg" alt="Viz 01"><p>Viz 01</p></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/viz/viz-02.jpg" alt="Viz 02"><p>Viz 02</p></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/viz/viz-03.jpg" alt="Viz 03"><p>Viz 03</p></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/viz/viz-04.jpg" alt="Viz 04"><p>Viz 04</p></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/viz/viz-05.jpg" alt="Viz 05"><p>Viz 05</p></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/viz/viz-06.jpg" alt="Viz 06"><p>Viz 06</p></div>
             </div>
             <div class="related-links">
                 <a href="#gameroom" class="related-link" data-section-jump="gameroom"><span lang="bs">Koncept igraonice</span><span lang="en">Game room concept</span></a>
@@ -390,9 +387,16 @@
             btn.textContent = document.body.classList.contains("light-mode") ? "sun" : "moon";
         }
 
+        function applyAutoTheme() {
+            const hour = new Date().getHours();
+            const useLightTheme = hour >= 7 && hour < 19;
+            document.body.classList.toggle("light-mode", useLightTheme);
+        }
+
         function toggleTheme() {
             document.body.classList.toggle("light-mode");
             localStorage.setItem("theme", document.body.classList.contains("light-mode") ? "light" : "dark");
+            localStorage.setItem("themePreference", "manual");
             setThemeIcon();
         }
 
@@ -464,7 +468,13 @@
         });
 
         const savedTheme = localStorage.getItem("theme");
-        if (savedTheme === "light") document.body.classList.add("light-mode");
+        const themePreference = localStorage.getItem("themePreference");
+
+        if (themePreference === "manual" && (savedTheme === "light" || savedTheme === "dark")) {
+            document.body.classList.toggle("light-mode", savedTheme === "light");
+        } else {
+            applyAutoTheme();
+        }
         setThemeIcon();
 
         const savedLang = localStorage.getItem("lang");
