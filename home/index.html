@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pofalici House Reconstruction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"></noscript>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -43,8 +48,10 @@
 
     <main class="container">
         <section id="overview" class="active">
-            <h2 lang="bs">Pregled Projekta</h2>
-            <h2 lang="en">Project Overview</h2>
+            <h2 lang="bs">🏠 Pregled Projekta</h2>
+            <h2 lang="en">🏠 Project Overview</h2>
+            <p class="section-note" lang="bs"><strong>Ključne činjenice:</strong> lokacija, budžet i cilj useljenja na jednom mjestu.</p>
+            <p class="section-note" lang="en"><strong>Key facts:</strong> location, budget, and move-in target in one place.</p>
 
             <div class="grid">
                 <div class="card">
@@ -61,8 +68,8 @@
                 <div class="card">
                     <h4 lang="bs">Povrsina</h4>
                     <h4 lang="en">Area</h4>
-                    <p lang="bs">Parcela: 142m2 | Bruto: oko 220m2 | Spratovi: 4</p>
-                    <p lang="en">Plot: 142m2 | Gross area: about 220m2 | Floors: 4</p>
+                    <p lang="bs">Parcela: <strong>142 m<sup>2</sup></strong> | Bruto: oko <strong>220 m<sup>2</sup></strong> | Spratovi: <strong>4</strong></p>
+                    <p lang="en">Plot: <strong>142 m<sup>2</sup></strong> | Gross area: about <strong>220 m<sup>2</sup></strong> | Floors: <strong>4</strong></p>
                 </div>
                 <div class="card">
                     <h4 lang="bs">Legalizacija</h4>
@@ -108,6 +115,8 @@
         <section id="budget">
             <h2 lang="bs">💰 Budzet</h2>
             <h2 lang="en">💰 Budget</h2>
+            <p class="section-note" lang="bs"><strong>Finansijski okvir:</strong> svi iznosi su u KM, a površine su prikazane kao m<sup>2</sup>.</p>
+            <p class="section-note" lang="en"><strong>Financial snapshot:</strong> all amounts are in KM and areas are formatted as m<sup>2</sup>.</p>
 
             <h3 lang="bs">🏡 Kupovina i legalizacija</h3>
             <h3 lang="en">🏡 Purchase and legalization</h3>
@@ -131,16 +140,16 @@
                     <td><span lang="bs">Na kupoprodajnu cijenu</span><span lang="en">On purchase value</span></td>
                 </tr>
                 <tr>
-                    <td><span lang="bs">Legalizacija 220m2</span><span lang="en">Legalization 220m2</span></td>
+                    <td><span lang="bs">Legalizacija 220 m<sup>2</sup></span><span lang="en">Legalization 220 m<sup>2</sup></span></td>
                     <td class="amount">35,200</td>
                     <td><span class="tag plan" lang="bs">Procjena</span><span class="tag plan" lang="en">Estimate</span></td>
-                    <td>160 KM/m2</td>
+                    <td>160 KM/m<sup>2</sup></td>
                 </tr>
                 <tr>
                     <td><span lang="bs">Legalizacija prosirenja</span><span lang="en">Extension legalization</span></td>
                     <td class="amount">1,200</td>
                     <td><span class="tag plan" lang="bs">Procjena</span><span class="tag plan" lang="en">Estimate</span></td>
-                    <td>7.5m2</td>
+                    <td>7.5 m<sup>2</sup></td>
                 </tr>
                 <tr class="total-row">
                     <td><span lang="bs">Ukupno</span><span lang="en">Total</span></td>
@@ -160,11 +169,11 @@
                     <th><span lang="bs">Napomena</span><span lang="en">Note</span></th>
                 </tr>
                 <tr><td><span lang="bs">Arhitektonski projekat</span><span lang="en">Architectural project</span></td><td class="amount">5,000</td><td><span class="tag plan" lang="bs">Planirano</span><span class="tag plan" lang="en">Planned</span></td><td>-</td></tr>
-                <tr><td><span lang="bs">Gradjevinski radovi</span><span lang="en">Structural work</span></td><td class="amount">15,000</td><td><span class="tag plan" lang="bs">Planirano</span><span class="tag plan" lang="en">Planned</span></td><td>Prosirenje 7.5m2</td></tr>
+                <tr><td><span lang="bs">Gradjevinski radovi</span><span lang="en">Structural work</span></td><td class="amount">15,000</td><td><span class="tag plan" lang="bs">Planirano</span><span class="tag plan" lang="en">Planned</span></td><td>Prosirenje 7.5 m<sup>2</sup></td></tr>
                 <tr><td><span lang="bs">Krov</span><span lang="en">Roof</span></td><td class="amount">10,000</td><td><span class="tag plan" lang="bs">Planirano</span><span class="tag plan" lang="en">Planned</span></td><td><span lang="bs">Parcijalna rekonstrukcija</span><span lang="en">Partial rebuild</span></td></tr>
                 <tr><td><span lang="bs">Prozori</span><span lang="en">Windows</span></td><td class="amount">30,000</td><td><span class="tag plan" lang="bs">Planirano</span><span class="tag plan" lang="en">Planned</span></td><td><span lang="bs">PVC ili ALU</span><span lang="en">PVC or aluminum</span></td></tr>
                 <tr><td><span lang="bs">Toplotna pumpa</span><span lang="en">Heat pump</span></td><td class="amount">15,000</td><td><span class="tag plan" lang="bs">Planirano</span><span class="tag plan" lang="en">Planned</span></td><td>Daikin/Mitsubishi</td></tr>
-                <tr><td><span lang="bs">Podno grijanje</span><span lang="en">Floor heating</span></td><td class="amount">12,000</td><td><span class="tag plan" lang="bs">Planirano</span><span class="tag plan" lang="en">Planned</span></td><td>220m2</td></tr>
+                <tr><td><span lang="bs">Podno grijanje</span><span lang="en">Floor heating</span></td><td class="amount">12,000</td><td><span class="tag plan" lang="bs">Planirano</span><span class="tag plan" lang="en">Planned</span></td><td>220 m<sup>2</sup></td></tr>
                 <tr><td><span lang="bs">Elektroinstalacije</span><span lang="en">Electrical wiring</span></td><td class="amount">20,500</td><td><span class="tag plan" lang="bs">Planirano</span><span class="tag plan" lang="en">Planned</span></td><td><span lang="bs">Sva instalacija u podu + Cat6</span><span lang="en">In-floor wiring + Cat6</span></td></tr>
                 <tr><td><span lang="bs">KNX sistem</span><span lang="en">KNX system</span></td><td class="amount">10,500</td><td><span class="tag plan" lang="bs">Planirano</span><span class="tag plan" lang="en">Planned</span></td><td><span lang="bs">Infrastruktura + programiranje</span><span lang="en">Infrastructure + programming</span></td></tr>
                 <tr><td><span lang="bs">Ostalo</span><span lang="en">Other</span></td><td class="amount">26,300</td><td><span class="tag plan" lang="bs">Planirano</span><span class="tag plan" lang="en">Planned</span></td><td><span lang="bs">Vrata, fasada, podovi, keramika, kuhinja</span><span lang="en">Doors, facade, floors, tiles, kitchen</span></td></tr>
@@ -183,8 +192,10 @@
         </section>
 
         <section id="timeline">
-            <h2 lang="bs">Vremenski Plan</h2>
-            <h2 lang="en">Timeline</h2>
+            <h2 lang="bs">🗓️ Vremenski Plan</h2>
+            <h2 lang="en">🗓️ Timeline</h2>
+            <p class="section-note" lang="bs"><strong>Plan po fazama:</strong> od pregovora do useljenja, sa jasnim milestone-ima.</p>
+            <p class="section-note" lang="en"><strong>Phase plan:</strong> from negotiation to move-in with clear milestones.</p>
             <div class="grid">
                 <div class="card"><h4 lang="bs">Faza 0 (Jan-Feb 2026)</h4><h4 lang="en">Phase 0 (Jan-Feb 2026)</h4><span class="tag plan" lang="bs">Pred-kupovina</span><span class="tag plan" lang="en">Pre-purchase</span><ul class="task-list"><li lang="bs">Pregovaranje cijene</li><li lang="en">Price negotiation</li><li lang="bs">Tehnicki pregled</li><li lang="en">Technical inspection</li></ul></div>
                 <div class="card"><h4 lang="bs">Faza 1 (Mar-Aug 2026)</h4><h4 lang="en">Phase 1 (Mar-Aug 2026)</h4><span class="tag plan" lang="bs">Planiranje</span><span class="tag plan" lang="en">Planning</span><ul class="task-list"><li lang="bs">Arhitektonski planovi</li><li lang="en">Architectural plans</li><li lang="bs">Elektro projekat</li><li lang="en">Electrical design</li></ul></div>
@@ -196,31 +207,13 @@
         </section>
 
         <section id="gallery">
-            <h2 lang="bs">Galerija i Pinterest Ideje</h2>
-            <h2 lang="en">Gallery and Pinterest Ideas</h2>
+            <h2 lang="bs">🖼️ Galerija i dokumenti</h2>
+            <h2 lang="en">🖼️ Gallery and documents</h2>
+            <p class="section-note" lang="bs"><strong>Kompletan prikaz:</strong> sve slike i PDF iz foldera <code>images/</code> su uključeni.</p>
+            <p class="section-note" lang="en"><strong>Complete set:</strong> all images and the PDF from <code>images/</code> are included.</p>
 
-            <h3 lang="bs">Igraonica</h3>
-            <h3 lang="en">Game Room</h3>
-            <div class="pinterest-gallery">
-                <div class="pinterest-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=400" alt="Neon room"><p lang="bs">Neon igraonica</p><p lang="en">Neon game room</p></div>
-                <div class="pinterest-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400" alt="Retro arcade"><p lang="bs">Retro arkada</p><p lang="en">Retro arcade</p></div>
-                <div class="pinterest-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400" alt="Gaming setup"><p lang="bs">Gaming zona</p><p lang="en">Gaming setup</p></div>
-                <div class="pinterest-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1593305841991-05c29736760b?w=400" alt="Pool"><p lang="bs">Bilijar zona</p><p lang="en">Pool area</p></div>
-                <div class="pinterest-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1605218427306-635ba249f692?w=400" alt="Cinema"><p lang="bs">Kino kutak</p><p lang="en">Cinema corner</p></div>
-                <div class="pinterest-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400" alt="Arcade machine"><p lang="bs">Arkadni automat</p><p lang="en">Arcade machine</p></div>
-            </div>
-
-            <h3 lang="bs">Interijer inspiracija</h3>
-            <h3 lang="en">Interior inspiration</h3>
-            <div class="pinterest-gallery">
-                <div class="pinterest-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=400" alt="Living"><p lang="bs">Dnevni boravak</p><p lang="en">Living room</p></div>
-                <div class="pinterest-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400" alt="Kitchen"><p lang="bs">Kuhinja</p><p lang="en">Kitchen</p></div>
-                <div class="pinterest-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=400" alt="Bedroom"><p lang="bs">Spavaca soba</p><p lang="en">Bedroom</p></div>
-                <div class="pinterest-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1584622050111-993a426fbf0a?w=400" alt="Bathroom"><p lang="bs">Kupatilo</p><p lang="en">Bathroom</p></div>
-            </div>
-
-            <h3 lang="bs">Postojece vizualizacije</h3>
-            <h3 lang="en">Current visualizations</h3>
+            <h3 lang="bs">✨ Postojece vizualizacije (16)</h3>
+            <h3 lang="en">✨ Existing visualizations (16)</h3>
             <div class="gallery">
                 <div class="gallery-item" onclick="openLightbox(this)"><img src="images/viz/viz-01.jpg" alt="Viz 01"><p>Viz 01</p></div>
                 <div class="gallery-item" onclick="openLightbox(this)"><img src="images/viz/viz-02.jpg" alt="Viz 02"><p>Viz 02</p></div>
@@ -228,15 +221,54 @@
                 <div class="gallery-item" onclick="openLightbox(this)"><img src="images/viz/viz-04.jpg" alt="Viz 04"><p>Viz 04</p></div>
                 <div class="gallery-item" onclick="openLightbox(this)"><img src="images/viz/viz-05.jpg" alt="Viz 05"><p>Viz 05</p></div>
                 <div class="gallery-item" onclick="openLightbox(this)"><img src="images/viz/viz-06.jpg" alt="Viz 06"><p>Viz 06</p></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/viz/viz-07.jpg" alt="Viz 07"><p>Viz 07</p></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/viz/viz-08.jpg" alt="Viz 08"><p>Viz 08</p></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/viz/viz-09.jpg" alt="Viz 09"><p>Viz 09</p></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/viz/viz-10.jpg" alt="Viz 10"><p>Viz 10</p></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/viz/viz-11.jpg" alt="Viz 11"><p>Viz 11</p></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/viz/viz-12.jpg" alt="Viz 12"><p>Viz 12</p></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/viz/viz-13.jpg" alt="Viz 13"><p>Viz 13</p></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/viz/viz-14.jpg" alt="Viz 14"><p>Viz 14</p></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/viz/viz-15.jpg" alt="Viz 15"><p>Viz 15</p></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/viz/viz-16.jpg" alt="Viz 16"><p>Viz 16</p></div>
             </div>
+
+            <h3 lang="bs">📷 Fotografije objekta (9)</h3>
+            <h3 lang="en">📷 Property photos (9)</h3>
+            <div class="gallery">
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/reference/IMG_4925.jpeg" alt="Reference 4925"><p>IMG 4925</p></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/reference/IMG_4926.jpeg" alt="Reference 4926"><p>IMG 4926</p></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/reference/IMG_4927.jpeg" alt="Reference 4927"><p>IMG 4927</p></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/reference/IMG_4928.jpeg" alt="Reference 4928"><p>IMG 4928</p></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/reference/IMG_4929.jpeg" alt="Reference 4929"><p>IMG 4929</p></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/reference/IMG_4930.jpeg" alt="Reference 4930"><p>IMG 4930</p></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/reference/IMG_4931.jpeg" alt="Reference 4931"><p>IMG 4931</p></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/reference/IMG_4932.jpeg" alt="Reference 4932"><p>IMG 4932</p></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="images/reference/IMG_4933.jpeg" alt="Reference 4933"><p>IMG 4933</p></div>
+            </div>
+
+            <h3 lang="bs">📐 Tlocrti i PDF dokumenti</h3>
+            <h3 lang="en">📐 Floor plans and PDF documents</h3>
+            <div class="document-grid">
+                <a class="document-card" href="images/floor-plans/osnova-prizemlja.pdf" target="_blank" rel="noopener noreferrer">
+                    <p lang="bs"><strong>📄 Osnova prizemlja (PDF)</strong></p>
+                    <p lang="en"><strong>📄 Ground-floor plan (PDF)</strong></p>
+                    <p class="muted" lang="bs">Klik za otvaranje ili preuzimanje dokumenta.</p>
+                    <p class="muted" lang="en">Click to open or download the document.</p>
+                </a>
+            </div>
+
             <div class="related-links">
                 <a href="#gameroom" class="related-link" data-section-jump="gameroom"><span lang="bs">Koncept igraonice</span><span lang="en">Game room concept</span></a>
+                <a href="#floors" class="related-link" data-section-jump="floors"><span lang="bs">Raspored spratova</span><span lang="en">Floor layout</span></a>
             </div>
         </section>
 
         <section id="floors">
-            <h2 lang="bs">Raspored po spratovima</h2>
-            <h2 lang="en">Floor Layout Plan</h2>
+            <h2 lang="bs">🧱 Raspored po spratovima</h2>
+            <h2 lang="en">🧱 Floor Layout Plan</h2>
+            <p class="section-note" lang="bs"><strong>Funkcionalna podjela:</strong> svaka etaža ima jasnu namjenu i tok kretanja.</p>
+            <p class="section-note" lang="en"><strong>Functional split:</strong> each level has a clear purpose and movement flow.</p>
             <div class="grid">
                 <div class="card"><h4 lang="bs">Suteren</h4><h4 lang="en">Basement</h4><ul class="task-list"><li lang="bs">Igraonica</li><li lang="en">Game room</li><li lang="bs">Server soba</li><li lang="en">Server room</li><li lang="bs">Skladiste i veseraj</li><li lang="en">Storage and laundry</li></ul><div class="related-links"><a href="#gameroom" class="related-link" data-section-jump="gameroom">Game room</a></div></div>
                 <div class="card"><h4 lang="bs">Prizemlje</h4><h4 lang="en">Ground floor</h4><ul class="task-list"><li lang="bs">Ulaz i dnevni boravak</li><li lang="en">Entrance and living room</li><li lang="bs">Kuhinja</li><li lang="en">Kitchen</li><li lang="bs">Malo kupatilo</li><li lang="en">Guest bathroom</li></ul></div>
@@ -246,8 +278,10 @@
         </section>
 
         <section id="gameroom">
-            <h2 lang="bs">Igraonica (suteren)</h2>
-            <h2 lang="en">Game Room (basement)</h2>
+            <h2 lang="bs">🎮 Igraonica (suteren)</h2>
+            <h2 lang="en">🎮 Game Room (basement)</h2>
+            <p class="section-note" lang="bs"><strong>Fun zona:</strong> fokus na akustici, osvjetljenju i modularnim scenama.</p>
+            <p class="section-note" lang="en"><strong>Fun zone:</strong> focused on acoustics, lighting, and modular scenes.</p>
             <div class="feature-grid">
                 <div class="idea-card"><h4 lang="bs">Retro + neon zona</h4><h4 lang="en">Retro + neon zone</h4><p lang="bs">Arkadni automat, LED trake i tamniji tonovi za fokus.</p><p lang="en">Arcade machine, LED strips, and darker tones for focus.</p></div>
                 <div class="idea-card"><h4 lang="bs">Bilijar i drustvene igre</h4><h4 lang="en">Pool and board games</h4><p lang="bs">Centralni stol plus police za drustvene igre.</p><p lang="en">Center pool table plus shelves for board games.</p></div>
@@ -263,8 +297,10 @@
         </section>
 
         <section id="smarthome">
-            <h2 lang="bs">Pametna kuca (KNX)</h2>
-            <h2 lang="en">Smart Home (KNX)</h2>
+            <h2 lang="bs">🤖 Pametna kuca (KNX)</h2>
+            <h2 lang="en">🤖 Smart Home (KNX)</h2>
+            <p class="section-note" lang="bs"><strong>Automatizacija:</strong> pouzdan KNX standard bez vendor lock-in rizika.</p>
+            <p class="section-note" lang="en"><strong>Automation:</strong> reliable KNX standard without vendor lock-in risk.</p>
 
             <div class="card">
                 <p lang="bs">KNX je stabilan evropski standard za automatizaciju kuce. Fokus je na pouzdanosti, servisibilnosti i prosirenju bez vendor lock-in-a.</p>
@@ -323,18 +359,22 @@
         </section>
 
         <section id="decisions">
-            <h2 lang="bs">Kljucne odluke</h2>
-            <h2 lang="en">Key decisions</h2>
+            <h2 lang="bs">✅ Kljucne odluke</h2>
+            <h2 lang="en">✅ Key decisions</h2>
+            <p class="section-note" lang="bs"><strong>Strateški izbori:</strong> sistem grijanja, stolarija i KNX okvir.</p>
+            <p class="section-note" lang="en"><strong>Strategic choices:</strong> heating system, windows, and KNX framework.</p>
             <div class="grid">
-                <div class="card"><h4 lang="bs">Toplotna pumpa</h4><h4 lang="en">Heat pump</h4><p lang="bs">Daikin ili Mitsubishi, sistem voda-zrak (~15,000 KM).</p><p lang="en">Daikin or Mitsubishi, air-to-water system (~15,000 KM).</p></div>
-                <div class="card"><h4 lang="bs">Prozori</h4><h4 lang="en">Windows</h4><p lang="bs">PVC ili ALU, troslojno staklo, U &lt;= 1.0 (~30,000 KM).</p><p lang="en">PVC or ALU, triple glazing, U &lt;= 1.0 (~30,000 KM).</p></div>
-                <div class="card"><h4 lang="bs">KNX</h4><h4 lang="en">KNX</h4><p lang="bs">Rasvjeta, klima, senzori i scene (~10,500 KM).</p><p lang="en">Lighting, climate, sensors, and scenes (~10,500 KM).</p></div>
+                <div class="card"><h4 lang="bs">Toplotna pumpa</h4><h4 lang="en">Heat pump</h4><p lang="bs"><strong>Daikin ili Mitsubishi</strong>, sistem voda-zrak (~15,000 KM).</p><p lang="en"><strong>Daikin or Mitsubishi</strong>, air-to-water system (~15,000 KM).</p></div>
+                <div class="card"><h4 lang="bs">Prozori</h4><h4 lang="en">Windows</h4><p lang="bs"><strong>PVC ili ALU</strong>, troslojno staklo, U &lt;= 1.0 (~30,000 KM).</p><p lang="en"><strong>PVC or ALU</strong>, triple glazing, U &lt;= 1.0 (~30,000 KM).</p></div>
+                <div class="card"><h4 lang="bs">KNX</h4><h4 lang="en">KNX</h4><p lang="bs"><strong>Rasvjeta, klima, senzori i scene</strong> (~10,500 KM).</p><p lang="en"><strong>Lighting, climate, sensors, and scenes</strong> (~10,500 KM).</p></div>
             </div>
         </section>
 
         <section id="contacts">
-            <h2 lang="bs">Kontakti</h2>
-            <h2 lang="en">Contacts</h2>
+            <h2 lang="bs">📞 Kontakti</h2>
+            <h2 lang="en">📞 Contacts</h2>
+            <p class="section-note" lang="bs"><strong>Mreža saradnika:</strong> ključni ljudi i firme za realizaciju projekta.</p>
+            <p class="section-note" lang="en"><strong>Partner network:</strong> key people and companies for project execution.</p>
 
             <h3 lang="bs">Osobe</h3>
             <h3 lang="en">People</h3>
@@ -359,8 +399,10 @@
         </section>
 
         <section id="sources">
-            <h2 lang="bs">Izvori cijena</h2>
-            <h2 lang="en">Price sources</h2>
+            <h2 lang="bs">🔎 Izvori cijena</h2>
+            <h2 lang="en">🔎 Price sources</h2>
+            <p class="section-note" lang="bs"><strong>Referentni izvori:</strong> tržišne cijene i tehničke informacije za poređenje.</p>
+            <p class="section-note" lang="en"><strong>Reference sources:</strong> market pricing and technical data for comparison.</p>
             <div class="grid">
                 <div class="card"><h4>daibau.ba</h4><p lang="bs">Gradjevinski radovi, prozori, elektrika</p><p lang="en">Construction works, windows, electrical</p></div>
                 <div class="card"><h4>inflacija.me</h4><p lang="bs">Cijene PVC stolarije</p><p lang="en">PVC pricing references</p></div>
