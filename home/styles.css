@@ -3,19 +3,19 @@
    ========================================= */
 :root {
     /* Dark Mode (Default) */
-    --bg-body: #101827;
-    --bg-card: #1f2c41;
-    --bg-nav: #16233a;
-    --bg-header: #0f1b2f;
-    --bg-section: #18243a;
-    --bg-soft: rgba(148, 163, 184, 0.13);
-    --bg-nav-translucent: rgba(22, 35, 58, 0.93);
+    --bg-body: #0d1523;
+    --bg-card: #1a273d;
+    --bg-nav: #131f33;
+    --bg-header: #0f192b;
+    --bg-section: #142137;
+    --bg-soft: rgba(148, 163, 184, 0.18);
+    --bg-nav-translucent: rgba(19, 31, 51, 0.95);
     
     --text-main: #f1f5f9;
-    --text-muted: #c2cfe1;
+    --text-muted: #cad6e8;
     --text-accent: #38bdf8;
     
-    --border-color: #334155;
+    --border-color: #445779;
     --border-focus: #38bdf8;
     
     --primary: #38bdf8;
@@ -35,26 +35,26 @@
     --radius-md: 0.5rem;
     --radius-lg: 0.75rem;
     
-    --font-sans: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --font-sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-display: "Lexend", "Manrope", "Segoe UI", sans-serif;
     --transition: all 0.2s ease-in-out;
 }
 
 body.light-mode {
     /* Light Mode */
-    --bg-body: #ecf2f8;
-    --bg-card: #ffffff;
-    --bg-nav: #dfe9f5;
-    --bg-header: #d9e5f3;
-    --bg-section: #f5f9fd;
-    --bg-soft: rgba(15, 23, 42, 0.06);
-    --bg-nav-translucent: rgba(223, 233, 245, 0.95);
+    --bg-body: #e7eef8;
+    --bg-card: #fdfefe;
+    --bg-nav: #d6e2f1;
+    --bg-header: #cedced;
+    --bg-section: #f1f6fc;
+    --bg-soft: rgba(15, 23, 42, 0.09);
+    --bg-nav-translucent: rgba(214, 226, 241, 0.96);
     
     --text-main: #0f172a;
     --text-muted: #64748b;
     --text-accent: #0284c7;
     
-    --border-color: #e2e8f0;
+    --border-color: #bdcde1;
     --border-focus: #0284c7;
     
     --primary: #0284c7;
@@ -318,6 +318,10 @@ section.active {
     box-shadow: var(--shadow-sm);
 }
 
+body.light-mode section.active {
+    box-shadow: 0 8px 18px -14px rgba(2, 40, 84, 0.42);
+}
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
@@ -380,6 +384,15 @@ h4 {
     padding: 1.5rem;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
+}
+
+body.light-mode .card,
+body.light-mode .idea-card,
+body.light-mode .feature-card,
+body.light-mode .contact-card,
+body.light-mode .document-card {
+    border-color: #b8c9de;
+    box-shadow: 0 10px 18px -16px rgba(15, 23, 42, 0.6);
 }
 
 .card:hover, .idea-card:hover, .feature-card:hover, .contact-card:hover {
