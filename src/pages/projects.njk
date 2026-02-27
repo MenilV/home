@@ -1,0 +1,62 @@
+---
+layout: base.njk
+title: Projects
+description: Selected projects and experiments. Some public, some secret.
+permalink: /projects/
+---
+
+
+<div class="page-header">
+  <div class="container">
+    <h1 class="page-title">Projects</h1>
+    <p class="page-description">
+      A selection of projects I've worked on. Some are public, some are experiments, 
+      and some are secrets shared only with those who know where to look.
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="grid grid-2">
+    {%- for project in collections.publicProjects -%}
+    <article class="card">
+      <h3 class="card-title">
+        {%- if project.data.url -%}
+        <a href="{{ project.data.url }}" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+          {{ project.data.title }}
+        </a>
+        {%- else -%}
+        <a href="{{ project.url }}" style="text-decoration: none; color: inherit;">
+          {{ project.data.title }}
+        </a>
+        {%- endif -%}
+      </h3>
+      <p class="card-meta">
+        {%- if project.data.year -%}
+        {{ project.data.year }}
+        {%- endif -%}
+        {%- if project.data.role -%}
+        {%- if project.data.year -%} · {%- endif -%}
+        {{ project.data.role }}
+        {%- endif -%}
+      </p>
+      <p class="card-description">{{ project.data.description }}</p>
+      {%- if project.data.tags -%}
+      <div style="margin-top: var(--space-4); display: flex; gap: var(--space-2); flex-wrap: wrap;">
+        {%- for tag in project.data.tags -%}
+        {%- if tag != 'project' -%}
+        <span class="tag">{{ tag }}</span>
+        {%- endif -%}
+        {%- endfor -%}
+      </div>
+      {%- endif -%}
+    </article>
+    {%- endfor -%}
+  </div>
+  
+  {%- if collections.publicProjects.length === 0 -%}
+  <div style="text-align: center; padding: var(--space-16) 0;">
+    <p style="color: var(--text-tertiary);">Projects coming soon. Check back later!</p>
+  </div>
+  {%- endif -%}
+</div>

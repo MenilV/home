@@ -1,0 +1,43 @@
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="Home">
+        <span class="logo-text">mv</span>
+      </a>
+      
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+          <span class="hamburger"></span>
+        </button>
+        
+        <ul id="nav-menu" class="nav-list" role="menubar">
+          <li role="none">
+            <a href="/" class="nav-link{% if page.url == '/' %} active{% endif %}" role="menuitem">Home</a>
+          </li>
+          <li role="none">
+            <a href="/about/" class="nav-link{% if page.url == '/about/' %} active{% endif %}" role="menuitem">About</a>
+          </li>
+          <li role="none">
+            <a href="/blog/" class="nav-link{% if page.url == '/blog/' or page.url.includes('/blog/') %} active{% endif %}" role="menuitem">Blog</a>
+          </li>
+          <li role="none">
+            <a href="/projects/" class="nav-link{% if page.url == '/projects/' %} active{% endif %}" role="menuitem">Projects</a>
+          </li>
+          <li role="none">
+            <a href="/contact/" class="nav-link{% if page.url == '/contact/' %} active{% endif %}" role="menuitem">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      
+      <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+        <svg class="theme-icon light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"/>
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+        <svg class="theme-icon dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>

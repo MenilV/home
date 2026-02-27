@@ -1,0 +1,21 @@
+{
+  "name": "menilvukovic.com",
+  "version": "1.0.0",
+  "description": "Personal website of Menil Vuković - Engineer, CEO, Writer",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve --watch",
+    "debug": "DEBUG=* eleventy"
+  },
+  "keywords": [
+    "personal-website",
+    "blog",
+    "eleventy"
+  ],
+  "author": "Menil Vuković",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0"
+  }
+}
