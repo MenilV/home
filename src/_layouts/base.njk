@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }} | {% endif %}Menil Vuković</title>
+  <meta name="description" content="{% if description %}{{ description }}{% else %}Engineer, CEO, Writer. Building digital products at Pear Shadow.{% endif %}">
+  <meta name="author" content="Menil Vuković">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="{% if title %}{{ title }}{% else %}Menil Vuković{% endif %}">
+  <meta property="og:description" content="{% if description %}{{ description }}{% else %}Engineer, CEO, Writer{% endif %}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://menilvukovic.com{{ page.url }}">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  
+  {% if page.url.includes('/blog/') and not page.url == '/blog/' %}
+  <link rel="stylesheet" href="/css/syntax.css">
+  {% endif %}
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  {% include "header.njk" %}
+  
+  <main id="main-content">
+    {{ content | safe }}
+  </main>
+  
+  {% include "footer.njk" %}
+  
+  <!-- Scripts -->
+  <script src="/js/theme.js"></script>
+  <script src="/js/konami.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+---
+layout: base.njk
+title: Home
+---
+
+<section class="hero">
+  <div class="container">
+    <h1 class="hero-title">Menil Vuković</h1>
+    <p class="hero-subtitle">
+      Engineer, CEO, and writer. Building digital products at 
+      <a href="https://pearshadow.com" target="_blank" rel="noopener">Pear Shadow</a>. 
+      Transforming ambitious ideas into reliable software.
+    </p>
+    <div class="hero-cta">
+      <a href="/about/" class="btn btn-primary">About Me</a>
+      <a href="/blog/" class="btn btn-secondary">Read Blog</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid-3">
+      <article class="card">
+        <h3 class="card-title">Engineering</h3>
+        <p class="card-meta">13+ years</p>
+        <p class="card-description">
+          Android, wearables, fintech, and e-commerce. From startups to enterprises like 
+          Philips, Mayo Clinic, and Raiffeisen Bank.
+        </p>
+      </article>
+      
+      <article class="card">
+        <h3 class="card-title">Leadership</h3>
+        <p class="card-meta">CEO @ Pear Shadow</p>
+        <p class="card-description">
+          Leading a team of engineers and designers building scalable software solutions 
+          for clients worldwide.
+        </p>
+      </article>
+      
+      <article class="card">
+        <h3 class="card-title">Writing</h3>
+        <p class="card-meta">Technical & Essays</p>
+        <p class="card-description">
+          Sharing thoughts on software engineering, venture building, and the intersection 
+          of technology and art.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container-narrow">
+    <h2 style="text-align: center; margin-bottom: var(--space-8);">Recent Writing</h2>
+    
+    <ul class="post-list">
+      {%- for post in collections.posts | limit(3) -%}
+      <li class="post-item">
+        <a href="{{ post.url }}" class="post-link">
+          <h3 class="post-title">{{ post.data.title }}</h3>
+          <p class="post-excerpt">{{ post.data.description }}</p>
+          <time class="post-date" datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time>
+        </a>
+      </li>
+      {%- endfor -%}
+    </ul>
+    
+    <div style="text-align: center; margin-top: var(--space-8);">
+      <a href="/blog/" class="btn btn-secondary">View All Posts</a>
+    </div>
+  </div>
+</section>
