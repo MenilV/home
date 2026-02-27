@@ -430,11 +430,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Language Visibility Logic */
-[lang="en"] { display: none; } /* Default hidden */
-
-body.lang-en [lang="en"] { display: revert; }
-body.lang-en [lang="bs"] { display: none; }
+/* Note: Language switching is only for /home project, not main site */
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
