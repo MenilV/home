@@ -474,4 +474,11 @@ body.layout-centered {
     justify-content: center;
     background: radial-gradient(circle at top, #1f2937, var(--bg-body));
 }
+
+.card-centered {
+    max-width: 680px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
 }
