@@ -164,6 +164,8 @@ a {
 
 a:hover {
   color: var(--accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 code {
@@ -373,6 +375,11 @@ main {
   line-height: var(--leading-relaxed);
 }
 
+.hero-subtitle a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .hero-cta {
   display: inline-flex;
   gap: var(--space-4);
@@ -399,7 +406,13 @@ main {
 
 .btn-primary:hover {
   background: var(--accent-hover);
-  color: white;
+  color: #052e16; /* High contrast dark text on light green */
+}
+
+/* Adjust primary button text for dark mode accessibility against green background */
+[data-theme="dark"] .btn-primary {
+  color: #052e16;
+  font-weight: 600;
 }
 
 .btn-secondary {
@@ -436,7 +449,7 @@ main {
 
 .card-meta {
   font-size: var(--text-sm);
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
   font-family: var(--font-mono);
   margin-bottom: var(--space-3);
 }
@@ -445,6 +458,11 @@ main {
   color: var(--text-secondary);
   font-size: var(--text-sm);
   line-height: var(--leading-relaxed);
+}
+
+.card-description a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 /* Grid */
@@ -605,6 +623,11 @@ main {
   margin-bottom: var(--space-5);
   font-size: var(--text-lg);
   line-height: var(--leading-relaxed);
+}
+
+.article-content a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .article-content ul,

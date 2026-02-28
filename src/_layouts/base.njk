@@ -1,44 +1,97 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if title %}{{ title }} | {% endif %}Menil Vuković</title>
-  <meta name="description" content="{% if description %}{{ description }}{% else %}Engineer, CEO, Writer. Building digital products at Pear Shadow.{% endif %}">
+  <meta name="description"
+    content="{% if description %}{{ description }}{% else %}Engineer, CEO, Writer. Building digital products at Pear Shadow.{% endif %}">
   <meta name="author" content="Menil Vuković">
-  
+
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
   <!-- Open Graph -->
-  <meta property="og:title" content="{% if title %}{{ title }}{% else %}Menil Vuković{% endif %}">
-  <meta property="og:description" content="{% if description %}{{ description }}{% else %}Engineer, CEO, Writer{% endif %}">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://menilvukovic.com{{ page.url }}">
-  
+  <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.name }}{% endif %}">
+  <meta property="og:description"
+    content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:type" content="{% if layout == 'post.njk' %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="{{ site.author.twitter }}">
+  <meta name="twitter:creator" content="{{ site.author.twitter }}">
+  <meta name="twitter:title" content="{% if title %}{{ title }}{% else %}{{ site.name }}{% endif %}">
+  <meta name="twitter:description"
+    content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {% if layout == 'post.njk' %}
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{ title }}",
+    "description": "{{ description }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.author.name }}"
+    },
+    "datePublished": "{{ date | isoDate }}",
+    "url": "{{ site.url }}{{ page.url }}"
+  }
+  {% else %}
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ site.author.name }}",
+    "url": "{{ site.url }}",
+    "jobTitle": "Engineer, CEO, Writer"
+  }
+  {% endif %}
+  </script>
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-  
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
   <!-- Styles -->
-  <link rel="stylesheet" href="/css/main.css">
-  
+  {% set css %}
+  {% include "../css/main.css" %}
+  {% endset %}
+  <style>
+    {
+        {
+        css | safe
+      }
+    }
+  </style>
+
   <link rel="stylesheet" href="/css/syntax.css">
 </head>
+
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  
+
   {% include "header.njk" %}
-  
+
   <main id="main-content">
     {{ content | safe }}
   </main>
-  
+
   {% include "footer.njk" %}
-  
+
   <!-- Scripts -->
   <script src="/js/theme.js"></script>
   <script src="/js/konami.js"></script>
 </body>
+
 </html>
