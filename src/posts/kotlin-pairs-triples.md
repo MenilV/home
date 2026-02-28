@@ -12,7 +12,7 @@ tags:
 
 _This post was originally published on the [Nutrient blog](https://www.nutrient.io/blog/pairs-and-triples-in-kotlin-and-why-you-shouldnt-use-them/)._
 
-Kotlin's `Pair` and `Triple` classes seem convenient at first glance. Need to return two values from a function? Just use a `Pair`. Three values? `Triple` has you covered.
+Kotlin's [`Pair`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/) and [`Triple`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-triple/) classes seem convenient at first glance. Need to return two values from a function? Just use a `Pair`. Three values? `Triple` has you covered.
 
 But this convenience comes at a cost. Let me explain why I think you should avoid them in production code.
 

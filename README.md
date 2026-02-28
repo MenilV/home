@@ -11,7 +11,6 @@ Built with [Eleventy](https://www.11ty.dev/) and deployed to GitHub Pages.
 - `/blog/` — Blog with technical writing
 - `/projects/` — Public projects showcase
 - `/contact/` — Contact information
-- `/home/` — **Hidden project** — Pofalići House Reconstruction (accessible by direct URL only)
 
 ## Development
 
@@ -34,9 +33,6 @@ To create a hidden project:
 1. Add `hidden: true` to the project frontmatter
 2. The project won't appear in `/projects/` listing
 3. It will still be built and accessible by direct URL
-
-Current hidden projects:
-- `/home/` — Pofalići House Reconstruction (complete standalone site)
 
 ## Easter Eggs
 

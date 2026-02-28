@@ -38,8 +38,6 @@
     '• Design inspired by Swiss minimalism',
     '• Hidden projects accessible via direct URLs',
     '',
-    'Hidden projects you might want to check out:',
-    '• /home/ - Pofalići House Reconstruction project',
     '',
     'Want to work together?',
     'Email: hello@menilvukovic.com',

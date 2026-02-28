@@ -64,13 +64,13 @@ Let me introduce you to **esoteric programming languages**, or esolangs. An esol
 
 ### Examples of Esoteric Languages
 
-**Brainfuck**, for instance, uses only eight symbols to express everything.
+**[Brainfuck](https://esolangs.org/wiki/Brainfuck)**, for instance, uses only eight symbols to express everything.
 
-**Chef** makes your code look like a recipe.
+**[Chef](https://esolangs.org/wiki/Chef)** makes your code look like a recipe.
 
-There's even **Piet**, named after the artist Piet Mondrian, where programs are written as colorful abstract paintings.
+There's even **[Piet](https://esolangs.org/wiki/Piet)**, named after the artist Piet Mondrian, where programs are written as colorful abstract paintings.
 
-Or even **Whitespace** — it's all white spaces so you can't really see this piece of art on a white background. Just like you've seen Mona Lisa's hands or two different places Da Vinci used as an inspiration for Mona Lisas' background.
+Or even **[Whitespace](https://esolangs.org/wiki/Whitespace)** — it's all white spaces so you can't really see this piece of art on a white background. Just like you've seen Mona Lisa's hands or two different places Da Vinci used as an inspiration for Mona Lisas' background.
 
 Esolangs challenge what code can be. They make programmers feel like artists again — confused, curious, and amazed. They create "first-time" moments — that same spark of discovery a child feels while drawing, or a traveler feels standing beneath the Sistine Chapel. They remind us that technology can make us feel, not just function.
 
@@ -92,7 +92,7 @@ That's not a trick. That's intentional craft that moves humans.
 
 ### The Quine Relay
 
-There's even a quine relay — a piece of art that starts in one language and when run, outputs code in another language and that one when run outputs code in the next language and so on, 128 times until it reaches the original Ruby language that it started from. You can find it on Github and try it for yourself. Or you can build your own.
+There's even a [quine relay](https://github.com/mame/quine-relay) — a piece of art that starts in one language and when run, outputs code in another language and that one when run outputs code in the next language and so on, 128 times until it reaches the original Ruby language that it started from. You can find it on Github and try it for yourself. Or you can build your own.
 
 ## The Future of Digital Art
 

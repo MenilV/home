@@ -32,6 +32,7 @@ deployment/
 .sisyphus/
 AGENTS.md
 CNAME
+# .github/ is NOT ignored - needed for GitHub Actions
 .github/
 .github/
 deployment/
