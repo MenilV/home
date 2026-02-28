@@ -1,6 +1,6 @@
 // Konami Code Easter Egg
 // ↑ ↑ ↓ ↓ ← → ← → B A
-(function() {
+(function () {
   const konamiCode = [
     'ArrowUp', 'ArrowUp',
     'ArrowDown', 'ArrowDown',
@@ -8,24 +8,11 @@
     'ArrowLeft', 'ArrowRight',
     'b', 'a'
   ];
-  
+
   let konamiIndex = 0;
   let konamiTimer = null;
-  
-  // Create toast element
-  const toast = document.createElement('div');
-  toast.className = 'konami-toast';
-  toast.innerHTML = `
-    <div class="konami-toast-content">
-      <span class="konami-toast-icon">🎮</span>
-      <div class="konami-toast-text">
-        <strong>Konami Code Activated!</strong>
-        <span>You've unlocked secret mode. Check the console.</span>
-      </div>
-    </div>
-  `;
-  document.body.appendChild(toast);
-  
+  let toast = null;
+
   // Secret messages to log
   const secrets = [
     '🎮 Konami Code Activated!',
@@ -44,34 +31,50 @@
     '',
     '— Menil'
   ];
-  
+
   function showKonamiToast() {
+    // Create toast only on first activation
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.className = 'konami-toast';
+      toast.innerHTML = `
+        <div class="konami-toast-content">
+          <span class="konami-toast-icon">🎮</span>
+          <div class="konami-toast-text">
+            <strong>Konami Code Activated!</strong>
+            <span>You've unlocked secret mode. Check the console.</span>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(toast);
+    }
+
     toast.classList.add('show');
-    
+
     // Log secrets to console
     console.log(secrets.join('\n'));
-    
+
     // Hide after 5 seconds
     setTimeout(() => {
       toast.classList.remove('show');
     }, 5000);
-    
+
     // Reset
     konamiIndex = 0;
   }
-  
+
   document.addEventListener('keydown', (e) => {
     // Clear timer on any keypress
     if (konamiTimer) {
       clearTimeout(konamiTimer);
     }
-    
+
     // Check if key matches expected key in sequence
     const expectedKey = konamiCode[konamiIndex];
-    
+
     if (e.key.toLowerCase() === expectedKey.toLowerCase()) {
       konamiIndex++;
-      
+
       // Check if code is complete
       if (konamiIndex === konamiCode.length) {
         showKonamiToast();
